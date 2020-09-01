@@ -14,25 +14,35 @@
 <body>
 
   <section class="storage">
+
     <div class="storage__icons">
       <img src="images/logo.svg" alt="Fylo">
-      <img src="images/icon-document.svg" alt="icon-document">
-      <img src="images/icon-folder.svg" alt="icon-folder">
-      <img src="images/icon-upload.svg" alt="icon-cloud">
-
+      <div class="storage__icons--share">
+        <img src="images/icon-document.svg" alt="icon-document">
+        <img src="images/icon-folder.svg" alt="icon-folder">
+        <img src="images/icon-upload.svg" alt="icon-cloud">
+      </div>
     </div>
+
     <div class="storage__summary">
       <p class="storage__summaryText">
-        You’ve used 815 GB of your storage
+        You’ve used <strong>815 GB</strong> of your storage
       </p>
 
-      <span class="storage__summaryAlert">185 GB Left</span>
-      
+      <span class="storage__summaryAlert"><strong>185</strong> GB Left</span>
+
+      <div class="storage__summarySlider">
+        <div class="storage__summarySlider--color">
+          <div class="storage__summarySlider--dot"></div>
+        </div>
+      </div>
+
       <p class="storage__summaryUnits">
         <span>0 GB</span>
         <span>1000 GB</span>
       </p>
     </div>
+
   </section>
   
 </body>
