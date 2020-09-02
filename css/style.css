@@ -19,11 +19,17 @@ body {
     color: var(--PaleBlue);
     margin: 0;
     padding: 0;
-    height: 100vh;
     background-color: var(--VeryDarkBlue);
     background-image: url(../images/bg-mobile.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.storage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 img { max-width: 100%; }
@@ -31,22 +37,23 @@ img { max-width: 100%; }
 .storage__icons, .storage__summary { 
     background-color: var(--DarkBlue);
     margin: 20px 10vw;
-    padding: 3rem;
+    padding: 40px;
     border-radius: 10px;
     width: 80%;
 }
 
 .storage__icons { border-top-right-radius: 100px;}
 
-.storage__icons--share { margin: 15px 0px 0px 0px; }
+.storage__icons--share { 
+    margin: 15px 0px 0px 0px;
+    display: flex;
+}
 
 .storage__icons--share img { 
-    height: 40px;
-    width: 40px;
     background-color: var(--VeryDarkBlue);
-    padding: 10px;
+    padding: 12px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .storage__summary {
@@ -55,7 +62,10 @@ img { max-width: 100%; }
     position: relative;
 }
 
-.storage__summaryText { font-size: .85rem; }
+.storage__summaryText { 
+    font-size: .85rem; 
+    font-weight: 400;
+}
 
 .storage__summarySlider {
     background-color: var(--VeryDarkBlue);
@@ -119,9 +129,51 @@ img { max-width: 100%; }
 
 
 @media only screen and (min-width: 900px) {
-    body{ 
+    body {
         background-image: url(../images/bg-desktop.png); 
         background-position: bottom;
         background-size: contain;
     }
+
+    .storage { 
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .storage__icons { 
+        height: 200px;
+        width: 30%;
+        max-width: 300px;
+        margin: 0 30px 16px 0;
+    }
+
+    .storage__summary { 
+        max-width: 550px;
+        height: 155px;
+        width: 50%;
+        margin: 30px 0 0 0;
+        padding: 32px;
+    }
+
+    .storage__summaryAlert { 
+        position: absolute;
+        top: -30px;
+        left: 80%;
+        width: 30%;
+        font-size: .7rem;
+        border-bottom-right-radius: 0;
+    }
+
+    .storage__summaryAlert::after {
+        content: '';
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background: white;
+        position: absolute;
+        bottom: -1rem;
+        right: 0;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+      }
+
 }
